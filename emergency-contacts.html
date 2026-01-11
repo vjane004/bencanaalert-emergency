@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malaysia Natural Disaster Emergency Contacts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            overflow: hidden;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+            color: white;
+            padding: 24px 30px;
+            text-align: center;
+            border-bottom: 4px solid #8B0000;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #FF5252;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 18px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(255, 82, 82, 0.3);
+        }
+        
+        .section {
+            padding: 24px 30px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            color: #D32F2F;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #FFCDD2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            font-size: 22px;
+        }
+        
+        .emergency-number {
+            background: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 16px;
+            margin: 12px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .contact-list {
+            list-style: none;
+            margin: 16px 0;
+        }
+        
+        .contact-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .contact-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-name {
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .contact-number {
+            background: #E3F2FD;
+            color: #1976D2;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .contact-number:hover {
+            background: #BBDEFB;
+            transform: translateY(-1px);
+        }
+        
+        .address-box {
+            background: #F5F5F5;
+            padding: 16px;
+            border-radius: 8px;
+            margin: 16px 0;
+            border-left: 4px solid #757575;
+        }
+        
+        .notes {
+            background: #E8F5E9;
+            padding: 18px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .notes ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .notes li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 14px;
+            border-top: 1px solid #eaeaea;
+        }
+        
+        .footer a {
+            color: #D32F2F;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+            
+            .contact-list li {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+            
+            .contact-number {
+                background: none;
+                color: black;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇲🇾 Malaysia Emergency Contacts</h1>
+            <p class="subtitle">Natural Disaster Response & Civil Defense</p>
+        </div>
+        
+        <div class="section" style="text-align: center;">
+            <div class="badge">
+                <i class="fas fa-phone-alt"></i> MAIN EMERGENCY NUMBER
+            </div>
+            <div class="emergency-number">
+                <h3 style="color: #D32F2F; margin-bottom: 8px;">999</h3>
+                <p style="color: #666;">
+                    <strong>Malaysia Emergency Response Services (MERS)</strong><br>
+                    Integrated service for Police, Fire, Medical, Maritime, and Civil Defense emergencies
+                </p>
+                <a href="tel:999" class="contact-number" style="margin-top: 12px; display: inline-block;">
+                    <i class="fas fa-phone"></i> Tap to Call 999
+                </a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-exclamation-triangle"></i> DISASTER-SPECIFIC CONTACTS</h2>
+            
+            <ul class="contact-list">
+                <li>
+                    <span class="contact-name"><i class="fas fa-water" style="color: #2196F3;"></i> Flood</span>
+                    <a href="tel:999" class="contact-number">999</a>
+                </li>
+                <li>
+                    <span class="contact-name"><i class="fas fa-fire" style="color: #FF5722;"></i> Fire</span>
+                    <a href="tel:999" class="contact-number">999</a>
+                </li>
+                <li>
+                    <span class="contact-name"><i class="fas fa-mountain" style="color: #795548;"></i> Landslide</span>
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <a href="tel:0388891972" class="contact-number">03-8889 1972 (DOE)</a>
+                        <a href="tel:999" class="contact-number" style="background: #FFEBEE; color: #D32F2F;">999 (Immediate Danger)</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="contact-name"><i class="fas fa-sink" style="color: #5D4037;"></i> Sinkhole</span>
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <a href="tel:0388891972" class="contact-number">03-8889 1972 (DOE)</a>
+                        <a href="tel:999" class="contact-number" style="background: #FFEBEE; color: #D32F2F;">999 (Immediate Danger)</a>
+                    </div>
+                </li>
+                <li>
+                    <span class="contact-name"><i class="fas fa-globe-asia" style="color: #4CAF50;"></i> Earthquake</span>
+                    <a href="tel:999" class="contact-number">999</a>
+                </li>
+                <li>
+                    <span class="contact-name"><i class="fas fa-industry" style="color: #607D8B;"></i> Pollution Complaints</span>
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <a href="tel:1800882727" class="contact-number">1-800-88-2727 (DOE Hotline)</a>
+                        <a href="tel:0388891972" class="contact-number">03-8889 1972 (DOE Complaints)</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-university"></i> DEPARTMENT OF ENVIRONMENT (DOE)</h2>
+            
+            <div class="address-box">
+                <p><strong>Main Address:</strong></p>
+                <p>Levels 1–4, Podium 2 & 3, Menara PETRA<br>
+                No.25, Persiaran Perdana, Precint 4<br>
+                Federal Government Administrative Center<br>
+                62574 Putrajaya, Malaysia</p>
+                
+                <p style="margin-top: 12px;"><strong>General Inquiries:</strong> 
+                <a href="tel:0388712000" class="contact-number" style="font-size: 14px;">03-8871 2000</a> / 
+                <a href="tel:0388712200" class="contact-number" style="font-size: 14px;">2200</a></p>
+            </div>
+            
+            <p><strong>Fax Numbers:</strong></p>
+            <ul class="contact-list" style="margin-top: 10px;">
+                <li><span class="contact-name">General</span><span class="contact-number" style="background: #F5F5F5; color: #333;">03-8889 1973/75</span></li>
+                <li><span class="contact-name">Director General</span><span class="contact-number" style="background: #F5F5F5; color: #333;">03-8889 1036</span></li>
+                <li><span class="contact-name">Deputy Director General (Operations)</span><span class="contact-number" style="background: #F5F5F5; color: #333;">03-8889 4020</span></li>
+                <li><span class="contact-name">Deputy Director General (Development)</span><span class="contact-number" style="background: #F5F5F5; color: #333;">03-8889 1039</span></li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-clipboard-check"></i> IMPORTANT NOTES</h2>
+            
+            <div class="notes">
+                <ol>
+                    <li><strong>When calling 999:</strong>
+                        <ul style="list-style: disc; margin-left: 20px; margin-top: 5px;">
+                            <li>Stay calm and speak clearly</li>
+                            <li>Provide your exact location</li>
+                            <li>Describe the emergency</li>
+                            <li>Mention injuries or trapped persons</li>
+                            <li>Follow the operator's instructions</li>
+                        </ul>
+                    </li>
+                    <li>The DOE Operations Room operates 24 hours</li>
+                    <li>For non-life-threatening environmental issues, use the DOE numbers</li>
+                    <li>Keep this list accessible during emergencies</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>For additional Information:</strong></p>
+            <p>
+                <a href="https://www.malaysia.gov.my/portal/content/30602" target="_blank">Official Malaysia Government Portal</a> | 
+                <a href="https://www.doe.gov.my/en/contact-us/" target="_blank">Department of Environment Website</a>
+            </p>
+            <p style="margin-top: 15px; font-size: 13px; color: #888;">
+                This page is part of BencanaAlert – Public Natural Disaster Reporting System<br>
+                QR Code ID: <span id="qrId">BA-MY-EMG-001</span> | Last Updated: October 2023
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Add last visited timestamp
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const lastUpdated = document.createElement('div');
+            lastUpdated.style.cssText = 'text-align: center; margin-top: 15px; color: #888; font-size: 12px;';
+            lastUpdated.textContent = `Page loaded: ${now.toLocaleString('en-MY')}`;
+            document.querySelector('.footer').appendChild(lastUpdated);
+            
+            // Make all phone numbers tappable
+            const phoneNumbers = document.querySelectorAll('span.contact-number');
+            phoneNumbers.forEach(el => {
+                const number = el.textContent.trim();
+                if (number.match(/^\d{2,4}-\d{3,4} \d{4}$/)) {
+                    const cleanNumber = number.replace(/-/g, '');
+                    el.innerHTML = `<a href="tel:${cleanNumber}" style="color: inherit; text-decoration: none;">${number}</a>`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
